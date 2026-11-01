@@ -37,12 +37,10 @@ With no external frameworks, npm packages, or build system required, Million Coi
 - **WebGL2 Rendering** — Custom graphics pipeline designed for efficient rendering of a large number of procedural objects.
 
 ## Preview
-
 <p align="center">
   <img src="graphic1.png" width="49%" alt="Avora interface preview 1">
   <img src="graphic2.png" width="49%" alt="Avora interface preview 2">
 </p>
-
 
 **Live Demo:** https://nowii-core.github.io/million-coins/millioncoins/
 
