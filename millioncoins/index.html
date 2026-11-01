@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Million Coins — find the stick</title>
+<meta name="description" content="One million gold coins. One hidden stick. Dig it out with your magnet. A zero-dependency first-person WebGL2 game.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="flash"></div>
+<div id="hud">
+  <div id="pauseBtn"><i></i><i></i></div>
+  <div id="upgBtn" class="stroke">UPGRADES [U]</div>
+  <div id="money" class="stroke"><b>+</b><span id="moneyV">0$</span></div>
+  <div id="info" class="stroke">COINS LEFT <span id="coinsLeft">1,000,000</span><br>DEPTH TO THE STICK <span id="depth">--</span></div>
+  <div id="cross"></div>
+  <div id="prompt" class="stroke"></div>
+  <div id="toast" class="stroke"></div>
+  <div id="bars">
+    <div class="barWrap"><div class="bar" id="barBag"><i></i></div>
+      <div class="ico"><svg viewBox="0 0 24 24"><path fill="#222" d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg></div></div>
+    <div class="barWrap"><div class="bar" id="barBat"><i></i></div>
+      <div class="ico"><svg viewBox="0 0 24 24"><path fill="#222" d="M3 7h16v3h2v4h-2v3H3zm2 2v6h12V9zm4 1h2v4H9z"/></svg></div></div>
+  </div>
+  <div id="joy"><i></i></div>
+  <div id="btnMag" class="stroke">MAGNET</div>
+  <div id="btnAct" class="stroke">E</div>
+</div>
+
+<div class="screen on" id="start">
+  <h1 class="stroke">MILLION<br>COINS</h1>
+  <h2 class="stroke">One million gold coins. One hidden stick.</h2>
+  <p>Somewhere deep under the mountain lies a stick. Dig it out with your magnet, carry the gold to the deposit machine, buy upgrades — and find it.</p>
+  <div class="keys">
+    <span><b>WASD</b> move</span><span><b>Mouse</b> look</span>
+    <span><b>Hold click</b> magnet</span><span><b>E</b> deposit / grab</span>
+    <span><b>Shift</b> run</span><span><b>U</b> upgrades</span>
+  </div>
+  <button class="btn stroke" id="playBtn">PLAY</button>
+</div>
+<div class="screen" id="pause">
+  <h1 class="stroke" style="font-size:clamp(36px,7vw,80px)">PAUSED</h1>
+  <button class="btn stroke" id="resumeBtn">RESUME</button>
+  <button class="btn alt stroke" id="upgBtn2">UPGRADES</button>
+</div>
+<div class="screen" id="upgScreen">
+  <div id="upg">
+    <h2 class="stroke" style="margin:0 0 4px;color:#ffd24a">UPGRADES</h2>
+    <div class="stroke" style="font-size:22px">Cash: <span id="upgMoney">0$</span></div>
+    <div id="urows"></div>
+    <button class="btn stroke" id="upgClose" style="margin-top:6px">BACK</button>
+  </div>
+</div>
+<div class="screen" id="win">
+  <h1 class="stroke" id="winH">YOU FOUND<br>THE STICK!</h1>
+  <h2 class="stroke">Million Coins complete</h2>
+  <p id="winStats"></p>
+  <button class="btn stroke" id="againBtn">PLAY AGAIN</button>
+</div>
+<div id="loading" class="stroke">Counting a million coins…</div>
+
+<script src="script.js"></script>
+</body>
+</html>
