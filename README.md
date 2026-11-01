@@ -38,9 +38,13 @@ With no external frameworks, npm packages, or build system required, Million Coi
 
 ## Preview
 
-**Live Demo:**
+<p align="center">
+  <img src="graphic1.png" width="49%" alt="Avora interface preview 1">
+  <img src="graphic2.png" width="49%" alt="Avora interface preview 2">
+</p>
 
-[https://nowii-core.github.io/million-coins/millioncoins/](https://nowii-core.github.io/million-coins/millioncoins/)
+
+**Live Demo:** https://nowii-core.github.io/million-coins/millioncoins/
 
 
 ## Tech Stack
