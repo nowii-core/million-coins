@@ -1,176 +1,179 @@
-# Million Coins
+Million Coins
 
-**One million gold coins. One hidden stick. One mission: find it.**
+One million gold coins. One hidden stick. One mission: find it.
 
 Million Coins is an experimental first-person 3D browser game built with vanilla HTML, CSS, JavaScript, and WebGL2. Explore a massive underground treasure vault, collect gold coins using a magnetic tool, deposit your loot, purchase equipment upgrades, and dig your way toward the hidden wooden stick.
 
 A lightweight, zero-dependency gaming experience featuring procedural 3D environments, custom WebGL2 rendering, dynamic coin interactions, and responsive controls.
 
-[Overview](#overview) | [Features](#features) | [Preview](#preview) | [Tech Stack](#tech-stack) | [Quick Start](#quick-start) | [Structure](#project-structure) | [Development](#development) | [License](#license)
+Overview | Features | Preview | Tech Stack | Quick Start | Controls | Project Structure | License
 
-## Overview
+Overview
 
-**Million Coins** is a first-person treasure-hunting game built around a simple but challenging objective: find a hidden wooden stick buried beneath a mountain of one million gold coins.
+Million Coins is a first-person treasure-hunting game built around a simple but challenging objective: find a hidden wooden stick buried beneath a mountain of one million gold coins.
 
 Players explore a large underground vault using a magnetic collection tool to attract nearby coins. Collected treasure can be transported to a deposit machine and exchanged for cash, which can then be used to purchase equipment upgrades.
 
-The game combines custom WebGL2 rendering, procedural geometry, real-time interactions, and a lightweight browser-based architecture.
+Instead of simulating one million individual physical objects, the treasure pile uses a granular heightfield and instanced procedural coin rendering to maintain a highly efficient rendering pipeline.
 
-Instead of simulating one million individual physical objects, the treasure pile uses a granular heightfield and instanced procedural coin rendering to maintain a more efficient rendering pipeline.
+Features
 
-With no external frameworks, npm packages, or build system required, Million Coins provides a self-contained browser gaming experience.
+First-Person 3D Gameplay — Explore a detailed underground vault through an immersive first-person perspective.
 
-## Features
+One Million Gold Coins — A massive procedural treasure environment featuring a granular coin pile.
 
-- **First-Person 3D Gameplay** — Explore a detailed underground vault through an immersive first-person perspective.
-- **One Million Gold Coins** — A massive procedural treasure environment featuring a granular coin pile.
-- **Magnetic Collection System** — Attract nearby coins using a magnetic tool and collect your treasure.
-- **Dynamic Coin Interactions** — Coins can move dynamically and fly toward the magnetic collection tool.
-- **Deposit & Economy System** — Transport collected coins to the deposit machine and convert your loot into cash.
-- **Equipment Upgrades** — Improve magnet performance, bag capacity, and battery capacity using earned money.
-- **Hidden Treasure Objective** — Dig through the mountain of gold to discover the hidden wooden stick and complete the challenge.
-- **Procedural 3D Environment** — Custom geometry, generated textures, lighting, and rendering created directly through JavaScript and WebGL2.
-- **Real-Time HUD** — Displays money, remaining coins, depth, bag capacity, and battery status.
-- **Desktop Controls** — Keyboard and mouse support for movement, camera rotation, interaction, and collection.
-- **Mobile Touch Controls** — Virtual joystick, touch-based camera movement, and dedicated interaction buttons.
-- **Zero Dependencies** — Built entirely with vanilla HTML, CSS, and JavaScript without external frameworks or npm packages.
-- **WebGL2 Rendering** — Custom graphics pipeline designed for efficient rendering of a large number of procedural objects.
+Magnetic Collection System — Attract nearby coins using a magnetic tool and collect your treasure.
 
-## Preview
-<p align="center">
-  <img src="graphic1.png" width="49%" alt="million-coins preview 1">
-  <img src="graphic2.png" width="49%" alt="million-coins preview 2">
-</p>
+Dynamic Coin Interactions — Coins move dynamically and fly toward your collection tool.
 
-**Live Demo:** https://nowii-core.github.io/million-coins/millioncoins/
+Deposit & Economy System — Transport collected coins to the deposit machine and convert your loot into cash.
+
+Equipment Upgrades — Improve magnet performance, bag capacity, and battery capacity using earned money.
+
+Hidden Treasure Objective — Dig through the mountain of gold to discover the hidden wooden stick.
+
+Procedural 3D Environment — Custom geometry, generated textures, lighting, and rendering created directly through JavaScript and WebGL2.
+
+Real-Time HUD — Displays money, remaining coins, depth, bag capacity, and battery status.
+
+Cross-Platform Controls — Desktop keyboard/mouse support and fully functional mobile touch controls.
+
+Zero Dependencies — Built entirely with vanilla HTML, CSS, and JavaScript without external frameworks or build tools.
+
+Preview
+
+🎮 Play Live Demo Here
+
+Tech Stack
+
+Technology
+
+Purpose
+
+HTML5
+
+Game structure, interface layout, and canvas surface
+
+CSS3
+
+Responsive HUD, menus, overlay styling, and touch controls
+
+JavaScript (ES6+)
+
+Game engine, physics logic, procedural generation, and state management
+
+WebGL2
+
+Custom 3D graphics rendering pipeline, shaders, and GPU acceleration
+
+Canvas API
+
+Dynamic texture generation and image processing
+
+Quick Start
+
+Requirements
+
+Any modern browser supporting WebGL2 (Chrome, Safari, Firefox, Edge).
+
+Keyboard & Mouse (Desktop) or Touch Screen (Mobile).
+
+Run Locally
+
+Clone the repository:
+
+git clone https://github.com/nowii-core/million-coins.git
 
 
-## Tech Stack
+Navigate to the project folder:
 
-| Technology | Purpose |
-| :--- | :--- |
-| **HTML5** | Game structure, interface, and canvas rendering surface |
-| **CSS3** | Responsive interface, HUD, menus, and touch controls |
-| **JavaScript (ES6+)** | Game engine, gameplay logic, procedural generation, and interactions |
-| **WebGL2** | Custom 3D rendering pipeline, shaders, and GPU-accelerated graphics |
-| **Canvas API** | Procedural texture generation and image processing |
+cd million-coins/millioncoins
 
-**Dependencies:** None required.
 
-**Rendering:** WebGL2 is required to run the game.
+Start a local development server:
 
-## Quick Start
+python3 -m http.server 8000
 
-### Requirements
 
-- A modern browser with WebGL2 support.
-- Chrome, Safari, Firefox, or Edge.
-- Keyboard and mouse for desktop gameplay.
-- A touchscreen device for mobile controls.
-- Visual Studio Code or another code editor for local development.
+Open in your browser:
+Go to http://localhost:8000
 
-### Run Locally
+Controls
 
-1. **Clone the repository**
+Action
 
-   ```bash
-   git clone https://github.com/nowii-core/million-coins.git
-   ```
+Desktop
 
-2. **Enter the project directory**
+Mobile
 
-   ```bash
-   cd million-coins/millioncoins
-   ```
+Move
 
-3. **Open the project**
+WASD / Arrow Keys
 
-   ```bash
-   code .
-   ```
+Virtual Joystick
 
-4. **Start the application**
+Look around
 
-   Open `index.html` using the Live Server extension in Visual Studio Code, or serve the folder using a local development server.
+Mouse Drag
 
-   Alternatively, run:
+Touch Drag
 
-   ```bash
-   python3 -m http.server 8000
-   ```
+Collect coins
 
-   Then open:
+Hold Left Click
 
-   ```text
-   http://localhost:8000
-   ```
+MAGNET Button
 
-No installation, package manager, compilation, or build process is required.
+Deposit / Interact
 
-## Controls
+E
 
-| Action | Desktop | Mobile |
-| :--- | :--- | :--- |
-| Move | WASD / Arrow Keys | Virtual joystick |
-| Look around | Mouse | Touch and drag |
-| Collect coins | Hold left click | MAGNET button |
-| Deposit / interact | E | E button |
-| Run | Shift | — |
-| Open upgrades | U | Upgrade menu |
-| Pause | Esc | Pause button |
+E Button
 
-## Project Structure
+Run
 
-```text
+Shift
+
+—
+
+Upgrades
+
+U
+
+Upgrade Menu Button
+
+Pause
+
+Esc
+
+Pause Button
+
+Project Structure
+
 million-coins/
 └── millioncoins/
-    ├── index.html       # Main game structure
-    ├── style.css        # Interface, HUD, and responsive styling
-    ├── script.js        # Game engine and gameplay logic
+    ├── index.html       # Main game structure and HUD layout
+    ├── style.css        # Responsive styling and UI overlays
+    ├── script.js        # Core WebGL2 engine & game logic
+    ├── graphic1.png     # Preview image 1
+    ├── graphic2.png     # Preview image 2
     ├── README.md        # Project documentation
     └── LICENSE          # MIT License
-```
 
-## Performance & Rendering
 
-Million Coins uses a custom WebGL2 rendering pipeline to handle its large procedural environment.
+Performance & Rendering
 
-The treasure pile is represented through a granular heightfield with thermal erosion, combined with approximately 40,000 instanced procedural coin representations.
+Million Coins uses a custom WebGL2 rendering pipeline designed specifically for high-density particle environments:
 
-Additional dynamic coins are used for interactive magnetic collection, while procedural geometry and textures are generated directly through JavaScript.
+Heightfield & Thermal Erosion: The treasure pile geometry is calculated dynamically.
 
-This approach avoids individually simulating all one million coins while maintaining the visual scale of the environment.
+GPU Instancing: Handles ~40,000 active coin representations simultaneously without dropping frame rates.
 
-## Development
+Procedural Generation: All textures and 3D shapes are generated at runtime via code, eliminating heavy external asset loading.
 
-Million Coins is designed to be straightforward to explore, modify, and extend.
+License
 
-### Recommended Workflow
-
-1. Clone the repository.
-2. Open the `millioncoins` folder in your preferred editor.
-3. Start a local development server.
-4. Modify the HTML, CSS, or JavaScript files.
-5. Refresh the browser to test changes.
-6. Verify rendering and controls on desktop and mobile devices.
-
-### Customization
-
-The separated project architecture makes individual components easier to maintain:
-
-- **Interface & Structure:** Modify `index.html` to adjust menus, HUD elements, and interface components.
-- **Visual Styling:** Edit `style.css` to customize colors, layouts, typography, and responsive elements.
-- **Game Engine:** Modify `script.js` to experiment with gameplay mechanics, world generation, coin interactions, and rendering behavior.
-
-## Compatibility
-
-Million Coins requires a browser with WebGL2 support.
-
-Desktop and touchscreen input methods are supported, although performance may vary depending on the device's graphics hardware and browser implementation.
-
-## License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact & Support
 
